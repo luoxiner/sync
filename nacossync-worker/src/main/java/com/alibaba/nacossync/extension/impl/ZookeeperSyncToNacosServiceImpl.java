@@ -116,7 +116,6 @@ public class ZookeeperSyncToNacosServiceImpl implements SyncService {
                     log.error("event process from Zookeeper to Nacos was failed, taskId:{}", taskDO.getTaskId(), e);
                     metricsManager.recordError(MetricsStatisticsType.SYNC_ERROR);
                 }
-
             });
         } catch (Exception e) {
             log.error("sync task from Zookeeper to Nacos was failed, taskId:{}", taskDO.getTaskId(), e);
